@@ -7,7 +7,7 @@ class GetRequester
   
   URL = "http://data.cityofnewyork.us/resource/uvks-tn5n.json"
   
-  def get_response_body()
+  def get_response_body(URL)
     uri = URI.parse(URL)
     response = Net::HTTP.get_response(uri)
     response.body
