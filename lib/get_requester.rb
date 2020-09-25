@@ -8,7 +8,7 @@ class GetRequester
   attr_accessor :url
   
   def initialize(url)
-  @url = "http://data.cityofnewyork.us/resource/uvks-tn5n.json"
+  @url = url
   end
   def get_response_body
     uri = URI.parse(url)
