@@ -5,13 +5,13 @@ require 'json'
 
 class GetRequester
   
-  attr_accessor :URL
+  attr_accessor :url
   
-  def initialize(URL)
-  @URL = "http://data.cityofnewyork.us/resource/uvks-tn5n.json"
+  def initialize(url)
+  @url = "http://data.cityofnewyork.us/resource/uvks-tn5n.json"
   end
   def get_response_body
-    uri = URI.parse(URL)
+    uri = URI.parse(url)
     response = Net::HTTP.get_response(uri)
     response.body
   end
